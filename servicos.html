@@ -1,0 +1,122 @@
+<?php
+session_start();
+include('./backend/verificar.html');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+
+    <link rel="stylesheet" href="./css/servicos.css">
+    <link rel="stylesheet" href="./css/menu.css">
+
+</head>
+<body>
+
+    <!-- menu start -->
+    <header>
+        <div class="menuToggle" onclick="ToggleMenu();"></div>
+    <div class="navigation">
+        <div class="navArea">
+            <ul>
+                <li>
+                    <a href="index.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413355413393469/img1.jpg')">Home</a>
+                </li>
+                <li>
+                    <a href="explorar.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413358005477386/img2.png')">Explorar</a>
+                </li>
+                <li>
+                    <a href="servicos.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413359951614003/img3.jpg')">Serviços</a>
+                </li>
+                <li>
+                    <a href="contatos.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413362132647936/img4.jpg')">Contatos</a>
+                </li>
+            </ul>
+        </div>
+        <div class="imgArea">
+            <img src="./imagens/index/img/img1.jpg" id="slider">
+        </div>
+    </div>
+    </header>
+    <!-- menue end -->
+
+    <div class="container">
+        <div class="serviceBox">
+            <div class="icon" style="--i:#1f1796"><ion-icon name="information-circle-outline"></ion-icon></div>
+            <div class="content">
+                <h2>Informações</h2>
+                <p>
+                    Somos uma empresa informativa, que traz assuntos especializados na área de games.
+                </p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="icon" style="--i:#c92424"><ion-icon name="game-controller-outline"></ion-icon></div>
+            <div class="content">
+                <h2>Games</h2>
+                <p>
+                    Os jogos apresentados pelo site, vão desde jogos de console, até jogos de android e PC.
+                </p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="icon" style="--i:#979e0d"><ion-icon name="link-outline"></ion-icon></div>
+            <div class="content">
+                <h2>Link</h2>
+                <p>
+                    Direcionamentos para outros sites, trazem informações mais sólidas ao jogos e disponibiliza o acesso a compra do mesmo.
+                </p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="icon" style="--i:#9e2f0d"><ion-icon name="videocam-outline"></ion-icon></div>
+            <div class="content">
+                <h2>Trailers</h2>
+                <p>
+                    Acesse os trailer dos jogos através dos cards.
+                </p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="icon" style="--i:#0d9e2a"><ion-icon name="code-outline"></ion-icon></div>
+            <div class="content">
+                <h2>GamesBR</h2>
+                <p>
+                    Site desenvolvido pela equipe da GamesBR
+                </p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="icon back" style="--i:#5a5d78"><ion-icon name="chevron-up-outline"></ion-icon></div>
+            <div class="content">
+                <h2>Voltar</h2>
+                <p>
+                    Volte nas sessões anteriores, usando o ícone no canto superior direito.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- script menu start -->
+    <script>
+        function changeImage(anything){
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+    <!-- script menu end -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<?php
+session_start();
+include('./backend/verificar.html');
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar</title>
+
+    <!-- css principal -->
+    <link rel="stylesheet" href="./css/explore/explore.css">
+
+    <!-- css menu -->
+    <link rel="stylesheet" href="./css/menu.css">
+</head>
+<body>
+    
+    <section class="header">
+        <a href="#" class="logo"><h2>GameBR</h2></a>
+        <div class="menuToggle" onclick="ToggleMenu();"></div>
+        <div class="navigation">
+            <div class="navArea">
+                <ul>
+                    <li>
+                        <a href="index.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413355413393469/img1.jpg')">Home</a>
+                    </li>
+                    <li>
+                        <a href="explorar.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413358005477386/img2.png')">Explorar</a>
+                    </li>
+                    <li>
+                        <a href="servicos.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413359951614003/img3.jpg')">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="contatos.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413362132647936/img4.jpg')">Contatos</a>
+                    </li>
+                    <li>
+                        <a href="logout.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903407047784161320/banner.png')">Sair</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="imgArea">
+                <img src="https://cdn.discordapp.com/attachments/897304698468565022/903407047784161320/banner.png" id="slider">
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <img src="https://cdn.discordapp.com/attachments/897304698468565022/903407047784161320/banner.png" class="fitBg">
+        <div class="content">
+            <h2>Explore mais Jogos</h2>
+            <p>
+                Novos jogos imperdíveis para todas as plataformas!
+            </p>
+            <a href="#about" class="btn">Veja mais</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="contentBx">
+            <h2 class="titleText">Lançamentos</h2>
+            <p class="text">
+                Prepare-se para um novo tipo de grande aventura Pokémon em Pokémon™ Legends: Arceus, um 
+                jogo totalmente novo da Game Freak que combina ação e exploração com as raízes de RPG da 
+                série Pokémon. Embarque em missões de pesquisa na antiga região de Hisui. <br><br>
+                Explore extensões 
+                naturais para capturar Pokémon selvagens, aprendendo seu comportamento, aproximando-se 
+                sorrateiramente e jogando uma Poké Ball™ bem direcionada. Você também pode jogar a Poké 
+                Ball contendo seu Pokémon aliado perto de um Pokémon selvagem para entrar na batalha sem 
+                problemas.
+            </p>
+            <a href="https://legends.pokemon.com/en-us/" target="_blanck" class="btn">Visite a página oficial</a>
+        </div>
+        <div class="imgBx">
+            <img src="https://cdn.discordapp.com/attachments/897304698468565022/903407048144879616/img1.png" class="fitBg">
+        </div>
+    </section>
+
+    <section class="banner2">
+        <img src="https://cdn.discordapp.com/attachments/897304698468565022/903407044583899156/banner2.jpg" class="fitBg">
+    </section>
+
+    <section class="jogos" id="jogos">
+        <div class="content">
+            <h2 class="titleText">Jogos + aguardados</h2>
+            <p class="text">
+                Com os consoles da nova geração, novos jogos estão chegando... Tanto para o novo PS5 até para
+                o XBOX One Series X.
+            </p>
+        </div>
+        <div class="jogosList">
+            <div class="box">
+                <div class="imgBx">
+                    <a href="./files-html/explorar1.html"><img src="https://cdn.discordapp.com/attachments/897304698468565022/903407049801629706/jogos1.png" class="fitBg"></a>
+                </div>
+                <div class="content">
+                    <h2>God of War<br><span>PS4 e PS5</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <a href="./files-html/explorar2.html"><img src="https://cdn.discordapp.com/attachments/897304698468565022/903407051554820136/jogos2.png" class="fitBg"></a>
+                </div>
+                <div class="content">
+                    <h2>Horizon Forbidden West<br><span>PS5</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <a href="./files-html/explorar3.html"><img src="https://cdn.discordapp.com/attachments/897304698468565022/903407052599205938/jogos3.png" class="fitBg"></a>
+                </div>
+                <div class="content">
+                    <h2>Pokémon Legends<br><span>Nintendo Switch</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <a href="./files-html/explorar4.html"><img src="https://cdn.discordapp.com/attachments/897304698468565022/903407053932994590/jogos4.png" class="fitBg"></a>
+                </div>
+                <div class="content">
+                    <h2>Suicide Squad<br><span>Multiplataformas</span></h2>
+                </div>
+            </div>
+        </div>
+            <a href="#" class="btn">Voltar ao inicío</a>
+    </section>
+
+    <section class="banner3">
+        <img src="./imagens/explore-images/img-principal/banner3.jpg" class="fitBg">
+    </section>
+
+    <section class="footer">
+        <h4 class="copyrightText">Copyright &copy;2020 <a href="https://github.com/satoosan">satoosan</a>. All rights reserved.</h4>
+    </section>
+
+    <script>
+        function changeImage(anything){
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
