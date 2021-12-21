@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background: #111;
+    scroll-behavior: smooth;
+}
+
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo
+{
+    font-size: 2em;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* menu star */
+.navigation
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #111;
+    transition: 0.2s;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.navigation.active
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.navigation .navArea
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .navArea ul li
+{
+    list-style: none;
+}
+
+.navigation .navArea ul li::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.navigation .navArea ul li:nth-child(1)::before
+{
+    background: #1d5d92;
+}
+
+.navigation .navArea ul li:nth-child(2)::before
+{
+    background: #d42727;
+}
+
+.navigation .navArea ul li:nth-child(3)::before
+{
+    background: #3a7c3e;
+}
+
+.navigation .navArea ul li:nth-child(4)::before
+{
+    background: #2a2b2a;
+}
+
+
+.navigation .navArea ul li:hover::before
+{
+    opacity: 1;
+}
+
+.navigation .navArea ul li a
+{
+    font-size: 3em;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.navigation .navArea ul li:hover a
+{
+    color: rgba(255, 255, 255, 1);;
+}
+
+.imgArea
+{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    background: #f00;
+}
+
+.imgArea img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menuToggle
+{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background: #000 url(/imagens/img-toggle/menu.png);
+    z-index: 1000;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.menuToggle.active
+{
+    background: #000 url(/imagens/img-toggle/close.png);
+    z-index: 1000;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1);
+}
+
+@media (max-width: 768px)
+{
+    .navigation .navArea
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .navigation .navArea ul
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .navigation .navArea ul li
+    {
+        background: #fff;
+        margin: 5px 10px;
+        padding: 5px 10px;
+    }
+
+    .navigation .navArea ul li:hover
+    {
+        background: #ff355a;
+    }
+
+    .navigation .navArea ul li a
+    {
+        color: #000;
+        font-size: 2em;
+        letter-spacing: 2px;
+    }
+
+    .imgArea
+    {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #f00;
+    }
+
+    .navigation .navArea ul li:hover::before
+    {
+        opacity: 0;
+    }
+
+    .imgArea
+    {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #f00;
+        opacity: 0.7;
+    }
+}
+/* menu end */
+
+header .toggle
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url(./img/menu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+}
+
+
+/* slide start */
+.slider
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: #000;
+}
+
+.slider .imgBx
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transition-delay: 0s;
+    z-index: 1;
+    clip-path: circle(0px at center);
+}
+
+input[type="radio"] {
+    border: 0px;
+    width: 30px;
+    height: 2em;
+}
+.slider input[type="radio"]:checked + .imgBx
+{
+    z-index: 10;
+    clip-path: circle(1000px at center);
+    transition-delay: 0.75s;
+}
+
+
+.slider .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.slider .imgBx .content
+{
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+}
+
+.slider .imgBx .content h2
+{
+    font-size: 4em;
+    line-height: 1em;
+    color: #fff;
+}
+
+.slider .imgBx .content p
+{
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    line-height: 50px;
+}
+
+.slider .imgBx .content a
+{
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    padding: 10px 30px;
+    color: #111;
+    font-weight: 500;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.slider input[type="radio"]
+{
+    position: relative;
+    z-index: 1000;
+    margin: 5px;
+    margin-bottom: 40px;
+    outline: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px)
+{
+    header
+    {
+        padding: 20px 40px;
+    }
+    .slider .imgBx
+    {
+        padding: 40px;
+    }
+    .slider .imgBx .content h2
+    {
+        font-size: 3em;
+    }
+    .slider .imgBx .content p
+    {
+        font-size: 1em;
+        color: #fff;
+        margin-top: 10px;
+    }
+}
+/* slide end */
+
+/* footer */
+footer
+{
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .menu
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .menu li
+{
+    list-style: none;
+}
+
+footer .social_icon li a:hover
+{
+    transform: translateY(-10px);
+}
+
+footer .menu li a
+{
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover
+{
+    opacity: 1;
+}
+
+footer p
+{
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+footer .wave
+{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(https://cdn.discordapp.com/attachments/897304698468565022/901262431282659358/wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1
+{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+footer .wave#wave2
+{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3
+{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+footer .wave#wave4
+{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave
+{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02
+{
+    0%
+    {
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+/* footer end */
