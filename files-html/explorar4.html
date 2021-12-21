@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar</title>
+
+    <!-- css principal -->
+    <link rel="stylesheet" href="../css/explore/explore4.css">
+
+    <!-- css menu -->
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+    
+    <section class="header">
+        <a href="#" class="logo"><h2>GamesBR</h2></a>
+        <div class="menuToggle" onclick="ToggleMenu();"></div>
+        <div class="navigation">
+            <div class="navArea">
+                <ul>
+                    <li>
+                        <a href="../index.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413355413393469/img1.jpg')">Home</a>
+                    </li>
+                    <li>
+                        <a href="../explorar.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413358005477386/img2.png')">Explorar</a>
+                    </li>
+                    <li>
+                        <a href="../servicos.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413359951614003/img3.jpg')">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="../contatos.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413362132647936/img4.jpg')">Contatos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="imgArea">
+                <img src="https://cdn.discordapp.com/attachments/897304698468565022/903411643629834250/banner.jpg" id="slider">
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <img src="https://cdn.discordapp.com/attachments/897304698468565022/903411643629834250/banner.jpg" class="fitBg">
+        <div class="content">
+            <h2>Suicide Squad</h2>
+            <p>
+                Dos Criadores da Série Batman: Arkham
+            </p>
+            <a href="#about" class="btn">Veja mais</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="contentBx">
+            <h2 class="titleText">Suicide Squad Kill The Justice League</h2>
+            <p class="text">
+                Os criadores da série Batman: Arkham estão de volta com um novo jogo de tiro de ação e 
+                aventura: "Suicide Squad: Kill the Justice League". Os vilões mais perigosos do Universo 
+                DC foram forçados a se unir e assumir uma nova missão: matar a Liga da Justiça. <br><br>
+                Crie o caos em Metrópolis. Você é o Esquadrão Suicida. Chegando em 2022 para PS5, 
+                Xbox Series X e PC.
+            </p>
+            <a href="https://www.suicidesquadgame.com/pt-br" target="_blanck" class="btn">Visite a página oficial</a>
+        </div>
+        <div class="imgBx">
+            <img src="https://cdn.discordapp.com/attachments/897304698468565022/903411649015328788/img1.jpg" class="fitBg">
+        </div>
+    </section>
+
+    <section class="banner2">
+        <img src="https://cdn.discordapp.com/attachments/897304698468565022/903411645425016872/banner2.jpg" class="fitBg">
+    </section>
+
+    <section class="jogos" id="jogos">
+        <div class="content">
+            <h2 class="titleText">Bem-vindo a Força-Tarefa X. Sua missão? Matar a Liga da Justiça</h2>
+            <p class="text">
+                Assista aos trailer aqui embaixo!
+            </p>
+        </div>
+        <div class="jogosList">
+            <div class="box">
+                <div class="imgBx">
+                    <a href="https://youtu.be/0TspZmSE0f0?t=229" target="_black"><img src="https://cdn.discordapp.com/attachments/897304698468565022/903411650739191828/trailer1.png" class="fitBg"></a>
+                </div>
+                <div class="content">
+                    <h2>1° Trailer dublado<br><span>Suicide Squad</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <a href="https://youtu.be/MJJhLwq7db0?t=58" target="_black"><img src="https://cdn.discordapp.com/attachments/897304698468565022/903411652798607380/trailer2.png" class="fitBg"></a>
+                </div>
+                <div class="content">
+                    <h2>Trailer da História<br><span>Suicide Squad</span></h2>
+                </div>
+            </div>
+        </div>
+            <a href="#" class="btn">Voltar ao inicío</a>
+    </section>
+
+    <section class="banner3">
+        <img src="https://cdn.discordapp.com/attachments/897304698468565022/903411648394559538/banner3.png" class="fitBg">
+    </section>
+
+    <section class="footer">
+        <h4 class="copyrightText">Copyright &copy;2020 <a href="https://github.com/satoosan">Satoosan</a></h4>
+    </section>
+
+    <script>
+        function changeImage(anything){
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

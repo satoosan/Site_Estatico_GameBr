@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar</title>
+
+    <!-- css principal -->
+    <link rel="stylesheet" href="../css/explore/explore2.css">
+
+    <!-- css menu -->
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+    
+    <section class="header">
+        <a href="#" class="logo"><h2>GamesBR</h2></a>
+        <div class="menuToggle" onclick="ToggleMenu();"></div>
+        <div class="navigation">
+            <div class="navArea">
+                <ul>
+                    <li>
+                        <a href="../index.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413355413393469/img1.jpg')">Home</a>
+                    </li>
+                    <li>
+                        <a href="../explorar.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413358005477386/img2.png')">Explorar</a>
+                    </li>
+                    <li>
+                        <a href="../servicos.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413359951614003/img3.jpg')">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="../contatos.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413362132647936/img4.jpg')">Contatos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="imgArea">
+                <img src="https://cdn.discordapp.com/attachments/897304698468565022/903409406501351445/banner.jpg" id="slider">
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <img src="https://cdn.discordapp.com/attachments/897304698468565022/903409406501351445/banner.jpg" class="fitBg">
+        <div class="content">
+            <h2>Horizon Forbidden West</h2>
+            <p>
+                Junte-se à Aloy para desbravar o Oeste Proibido, uma área majestosa e perigosa que esconde novas ameaças misteriosas.
+            </p>
+            <a href="#about" class="btn">Veja mais</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="contentBx">
+            <h2 class="titleText">Horizon Forbidden West</h2>
+            <p class="text">
+                Explore terras distantes, enfrente máquinas maiores e mais imponentes, e encontre 
+                novas tribos incríveis ao retornar o futuro distante e pós-apocalíptico de Horizon.<br><br>
+                A terra está morrendo! Tempestades implacáveis e uma praga incontrolável devastam o que 
+                sobrou da humanidade enquanto máquinas assustadoras vagam por territórios próximos. A vida 
+                na Terra segue rumo à outra extinção, e ninguém sabe o porquê..
+            </p>
+            <a href="https://www.playstation.com/pt-br/games/horizon-forbidden-west/" target="_blanck" class="btn">Visite a página oficial</a>
+        </div>
+        <div class="imgBx">
+            <img src="https://cdn.discordapp.com/attachments/897304698468565022/903409432141127770/img1.jpg" class="fitBg">
+        </div>
+    </section>
+
+    <section class="banner2">
+        <img src="https://cdn.discordapp.com/attachments/897304698468565022/903409407797387274/banner2.jpg" class="fitBg">
+    </section>
+
+    <section class="jogos" id="jogos">
+        <div class="content">
+            <h2 class="titleText">Explore novos lugares</h2>
+            <p class="text">
+                Novos equipamentos, novos inimigos e um novo mundo aberto!
+            </p>
+        </div>
+        <div class="jogosList">
+            <div class="box">
+                <div class="imgBx">
+                    <a href="#about"><img src="https://cdn.discordapp.com/attachments/897304698468565022/903409435744014427/jogos1.png" class="fitBg"></a>
+                </div>
+                <div class="content">
+                    <h2>Enfrente novos perigos<br><span>PS5</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <a href="#about"><img src="https://cdn.discordapp.com/attachments/897304698468565022/903409468614774865/jogos2.png" class="fitBg"></a>
+                </div>
+                <div class="content">
+                    <h2>Um território majestoso<br><span>PS5</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <a href="#about"><img src="https://cdn.discordapp.com/attachments/897304698468565022/903409469692739654/jogos3.png" class="fitBg"></a>
+                </div>
+                <div class="content">
+                    <h2>Desbrave um vasto <br>mundo aberto<br><span>PS5</span></h2>
+                </div>
+            </div>
+        </div>
+            <a href="#" class="btn">Voltar ao inicío</a>
+    </section>
+
+    <section class="banner3">
+        <img src="../imagens/explore-images/img2/banner3.jpg" class="fitBg">
+    </section>
+
+    <section class="footer">
+        <h4 class="copyrightText">Copyright &copy;2020 <a href="https://github.com/satoosan">Satoosan</a></h4>
+    </section>
+
+    <script>
+        function changeImage(anything){
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

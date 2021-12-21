@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar</title>
+
+    <!-- css principal -->
+    <link rel="stylesheet" href="../css/explore/explore3.css">
+
+    <!-- css menu -->
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+    
+    <section class="header">
+        <a href="#" class="logo"><h2>GamesBR</h2></a>
+        <div class="menuToggle" onclick="ToggleMenu();"></div>
+        <div class="navigation">
+            <div class="navArea">
+                <ul>
+                    <li>
+                        <a href="../index.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413355413393469/img1.jpg')">Home</a>
+                    </li>
+                    <li>
+                        <a href="../explorar.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413358005477386/img2.png')">Explorar</a>
+                    </li>
+                    <li>
+                        <a href="../servicos.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413359951614003/img3.jpg')">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="../contatos.html" onmouseenter="changeImage('https://cdn.discordapp.com/attachments/897304698468565022/903413362132647936/img4.jpg')">Contatos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="imgArea">
+                <img src="https://cdn.discordapp.com/attachments/897304698468565022/903410552632660048/banner.png" id="slider">
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <img src="https://cdn.discordapp.com/attachments/897304698468565022/903410552632660048/banner.png" class="fitBg">
+        <div class="content">
+            <h2>Pokémon Legends: Arceus</h2>
+            <p>
+                Viaje para a região de Hisui - a antiga Sinnoh - e construa o primeiro Pokédex da região
+            </p>
+            <a href="#about" class="btn">Veja mais</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="contentBx">
+            <h2 class="titleText">Pokémon Legends: Arceus</h2>
+            <p class="text">
+                As batalhas na região de Hisui também têm algumas propriedades únicas. Pela primeira vez 
+                na série, seu Pokémon libera movimentos com o estilo ágil veloz ou o estilo forte e poderoso. 
+                Esses estilos também podem afetar o número de voltas consecutivas que o Pokémon pode dar!<br><br>
+                Jubilife Village é a base principal de suas aventuras em Pokémon Legends: Arceus. 
+                Em Pokémon Brilliant Diamond e Pokémon Shining Pearl, esta vila cresceu e se tornou a 
+                movimentada cidade de Jubilife. Existem também personagens em Pokémon Legends: Arceus 
+                que são antepassados de alguns rostos familiares que você talvez conheça.
+            </p>
+            <a href="https://legends.pokemon.com/en-us/" target="_blanck" class="btn">Visite a página oficial</a>
+        </div>
+        <div class="imgBx">
+            <img src="https://cdn.discordapp.com/attachments/897304698468565022/903410556868902923/img1.png" class="fitBg">
+        </div>
+    </section>
+
+    <section class="banner2">
+        <img src="https://cdn.discordapp.com/attachments/897304698468565022/903410555417681950/banner2.png" class="fitBg">
+    </section>
+
+    <section class="jogos" id="jogos">
+        <div class="content">
+            <h2 class="titleText">Conheça os novos Pokémon</h2>
+            <p class="text">
+                Prepare-se para um novo tipo de grande aventura Pokémon em Pokémon™ Legends: Arceus, um jogo totalmente novo da Game Freak que combina ação e exploração com as raízes de RPG da série Pokémon.
+            </p>
+        </div>
+        <div class="jogosList">
+            <div class="box">
+                <div class="imgBx">
+                    <a href="#about"><img src="https://cdn.discordapp.com/attachments/897304698468565022/903410559087677480/pokemon1.png" class="fitBg"></a>
+                </div>
+                <div class="content">
+                    <h2>Nova evolução de Scyther<br><span>Kleavor</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <a href="#about"><img src="https://cdn.discordapp.com/attachments/897304698468565022/903410559385473075/pokemon2.png" class="fitBg"></a>
+                </div>
+                <div class="content">
+                    <h2>Nova forma Hisuian<br><span>Zorua</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <a href="#about"><img src="https://cdn.discordapp.com/attachments/897304698468565022/903410560610213888/pokemon3.png" class="fitBg"></a>
+                </div>
+                <div class="content">
+                    <h2>Novo Pokémon<br><span>Wyrdeer</span></h2>
+                </div>
+            </div>
+        </div>
+            <a href="#" class="btn">Voltar ao inicío</a>
+    </section>
+
+    <section class="banner3">
+        <img src="https://cdn.discordapp.com/attachments/897304698468565022/903410555048562708/banner3.jpg" class="fitBg">
+    </section>
+
+    <section class="footer">
+        <h4 class="copyrightText">Copyright &copy;2020 <a href="https://github.com/satoosan">Satoosan</a></h4>
+    </section>
+
+    <script>
+        function changeImage(anything){
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
